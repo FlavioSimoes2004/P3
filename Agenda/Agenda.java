@@ -49,4 +49,11 @@ public class Agenda{
             System.out.println("Nao encontrado");
         }
     }
+
+    public void getContatos(){
+        for(int i = 0; i < contatos.size(); i++)
+        {
+            System.out.println(contatos.get(i).getNome());
+        }
+    }
 }

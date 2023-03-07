@@ -20,6 +20,14 @@ public class ContatoNormal extends Contato{
         this.dtnasc = dtnasc;
     }
 
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+
+    public void setCalendar(Calendar dtnasc){
+        this.dtnasc = dtnasc;
+    }
+
     public int getIdade(){
         return idade;
     }
