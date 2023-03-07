@@ -24,6 +24,18 @@ public class EContato extends Contato{
         return super.nome;
     }
 
+    public boolean compareEmail(String email){
+        for(int i = 0; i < emails.size(); i++)
+        {
+            if(emails.get(i).equals(email))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public String getEmails(){
         String retorno = "";
 

@@ -12,22 +12,41 @@ public class Agenda{
     }
 
     public void searchName(String nome){
+        boolean found = false;
         for(int i = 0; i < contatos.size(); i++)
         {
             EContato contato = contatos.get(i);
             if(contato.getNome().equals(nome))
             {
-                System.out.println(contato.getDados());
+                contato.getDados();
+                found = true;
+                break;
             }
         }
 
-        System.out.println("Nao encontrado");
+        if(found == false)
+        {
+            System.out.println("Nao encontrado");
+        }
     }
 
     public void searchEmail(String email){
+        boolean found = false;
+        
         for(int i = 0; i < contatos.size(); i++)
         {
-            
+            EContato contato = contatos.get(i);
+            if(contato.compareEmail(email) == true)
+            {
+                contato.getDados();
+                found = true;
+                break;
+            }
+        }
+
+        if(found == false)
+        {
+            System.out.println("Nao encontrado");
         }
     }
 }
