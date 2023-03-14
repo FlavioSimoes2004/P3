@@ -27,13 +27,6 @@ public class Circunferencia {
         {
             return "Fora do circulo";
         }
-        else if(expression < ray)
-        {
-            return "Dentro do circulo";
-        }
-        else
-        {
-            return "Igual ao raio";
-        }
+        return "Dentro do circulo";
     }
 }
