@@ -1,3 +1,5 @@
+package BancoAt.Banco;
+
 public class Conta{
     private String num;
     private double money;

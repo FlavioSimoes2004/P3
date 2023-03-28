@@ -18,7 +18,43 @@ public class Banco {
     }
 
     public void addAcc(Conta conta){
-        if(occup >= contas.length)
+        if(!increase && occup >= contas.length)
+        {
+            throw new IllegalStateException("Nao cabe mais contas");
+        }
+        else if(increase && occup >= contas.length)
+        {
+            increase();
+        }
+
+        contas[occup] = conta;
+        occup++;
+    }
+
+    public void addAcc(String num, double money){
+        Conta conta = new Conta(num, money);
+
+        if(!increase && occup >= contas.length)
+        {
+            throw new IllegalStateException("Nao cabe mais contas");
+        }
+        else if(increase && occup >= contas.length)
+        {
+            increase();
+        }
+
+        contas[occup] = conta;
+        occup++;
+    }
+
+    public void addAcc(String num){
+        Conta conta = new Conta(num);
+        
+        if(!increase && occup >= contas.length)
+        {
+            throw new IllegalStateException("Nao cabe mais contas");
+        }
+        else if(increase && occup >= contas.length)
         {
             increase();
         }
