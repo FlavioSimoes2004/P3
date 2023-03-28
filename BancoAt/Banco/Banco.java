@@ -1,9 +1,19 @@
+package BancoAt.Banco;
+
 public class Banco {
     private Conta[] contas;
     private int occup;
+    private boolean increase;
 
-    public Banco(){
+    public Banco(boolean increase){
         contas = new Conta[10];
+        this.increase = increase;
+        occup = 0;
+    }
+
+    public Banco(int size, boolean increase){
+        contas = new Conta[size];
+        this.increase = increase;
         occup = 0;
     }
 

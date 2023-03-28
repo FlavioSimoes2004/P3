@@ -3,7 +3,13 @@ public class Conta{
     private double money;
 
     public Conta(String num, double money){
+        this.num = num;
         this.money = money;
+    }
+
+    public Conta(String num){
+        this.num = num;
+        this.money = 0;
     }
 
     public void depositar(double quant){
