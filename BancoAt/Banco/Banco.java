@@ -63,20 +63,6 @@ public class Banco {
         occup++;
     }
 
-    public void closeAcc(String num){
-        Integer pos = getLocation(num);
-        contas[pos] = null;
-
-        for(int i = pos; i < occup; i++)
-        {
-            Conta aux = contas[i + 1];
-            contas[i] = aux;
-            contas[i + 1] = null;
-        }
-
-        occup--;
-    }
-
     private void increase(){
         Conta[] newContas = new Conta[contas.length * 2];
 
@@ -88,7 +74,7 @@ public class Banco {
         contas = newContas;
     }
 
-    private Integer getLocation(String num){
+    public Integer getLocation(String num){
         for(int i = 0; i < occup; i++)
         {
             if(contas[i].getNum().equals(num))
@@ -98,5 +84,22 @@ public class Banco {
         }
 
         return null;
+    }
+
+    public void Sacar(Integer pos, double money){
+        contas[pos].sacar(money);
+    }
+
+    public void Depositar(Integer pos, double money){
+        contas[pos].depositar(money);
+    }
+
+    public void showAllAcc(){
+        for(int i = 0; i < contas.length; i++)
+        {
+            System.out.println("Conta " + (i + 1));
+            System.out.println("Numero: " + contas[i].getNum());
+            System.out.println("Saldo: " + contas[i].showMoney() + "\n");
+        }
     }
 }

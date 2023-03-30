@@ -34,4 +34,8 @@ public class Conta{
     public String getNum(){
         return num;
     }
+
+    public double showMoney(){
+        return money;
+    }
 }
