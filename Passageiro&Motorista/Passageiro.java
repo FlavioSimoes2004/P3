@@ -7,7 +7,7 @@ public class Passageiro extends Pessoa{
     }
 
     public boolean solicitarCorrida(){
-        
+        return true;
     }
 
     public void setNota(double nota){

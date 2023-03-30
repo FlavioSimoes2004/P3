@@ -18,6 +18,10 @@ public class Main {
             esc = in.nextInt();
             switch(esc)
             {
+                case 0:
+                    System.out.println("Fechando programa");
+                break;
+
                 case 1:
                     System.out.println("Coloque o CPF: ");
                     num = in.next();
@@ -44,12 +48,16 @@ public class Main {
                     banco.Depositar(pos, value);
                 break;
 
-                case 5:
+                case 4:
                     banco.showAllAcc();
+                break;
+
+                default:
+                    System.out.println("Escolha invalida");
                 break;
             }
         }
-        while(esc != 'n');
+        while(esc != 0);
     }
 
     public void Menu(){
@@ -57,8 +65,8 @@ public class Main {
         System.out.println("1- cadastrar");
         System.out.println("2- Sacar");
         System.out.println("3- Depositar");
-        System.out.println("4- Atualizar todos os valores");
-        System.out.println("5- Mostrar saldo das contas");
+        System.out.println("4- Mostrar saldo das contas");
+        System.out.println("5- Atualizar todos os valores");
         System.out.println("Escolha: ");
     }
 }
