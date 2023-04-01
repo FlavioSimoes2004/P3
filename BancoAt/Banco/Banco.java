@@ -102,4 +102,13 @@ public class Banco {
             System.out.println("Saldo: " + contas[i].showMoney() + "\n");
         }
     }
+
+    public void poupanca(){
+        for(int i = 0; i < contas.length; i++)
+        {
+            contas[i].poupanca(6.17);
+        }
+
+        showAllAcc();
+    }
 }

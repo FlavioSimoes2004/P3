@@ -52,6 +52,10 @@ public class Main {
                     banco.showAllAcc();
                 break;
 
+                case 5:
+                    banco.poupanca();
+                break;
+
                 default:
                     System.out.println("Escolha invalida");
                 break;

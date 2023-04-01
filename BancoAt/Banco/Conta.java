@@ -38,4 +38,8 @@ public class Conta{
     public double showMoney(){
         return money;
     }
+
+    public void poupanca(double percent){
+        this.money = money + (money * percent);
+    }
 }
