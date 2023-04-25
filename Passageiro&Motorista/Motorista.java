@@ -3,15 +3,24 @@ public class Motorista extends Pessoa{
     private String cor_carro;
     private double nota;
     private double saldo;
+    private double minDistance;
 
-    Motorista(String nome, int idade, String placa_carro){
+    Motorista(String nome, int idade, String placa_carro, double minDistance){
         super(nome, idade);
         this.placa_carro = placa_carro;
     }
 
-    public void aceitarCorrida(double a, double b, double c){
-        setSaldo(a, b, c);
-        System.out.println("Saldo deu: " + saldo);
+    public boolean responderCorrida(double distance){
+        if(distance > minDistance)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void setMinDistance(double minDistance){
+        this.minDistance = minDistance;
     }
 
     public void setPlate(String placa){
